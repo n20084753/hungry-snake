@@ -1,0 +1,34 @@
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "components/button";
+@import "components/popup";
+
+@import "layout/grid";
+@import "layout/header";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $default-font-family;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: $default-font-color;
+}
+
+canvas {
+    @include absoluteCenter;
+    transform: translate(-50%, -44%); // hack to center the canvas with dom header
+}

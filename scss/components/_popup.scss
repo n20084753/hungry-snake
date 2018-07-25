@@ -1,0 +1,104 @@
+.popup {
+    height: 540px;
+    width: 900px;
+    @include absoluteCenter;
+    transform: translate(-50%, -44%); // hack to center the canvas with dom header
+    background: rgba($color: #000000, $alpha: .75);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+    &__content  {                
+        width: 75%;
+        border-radius: 3px; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.25);
+        text-align: center;
+        padding: 20px;        
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .5s .2s;
+    }    
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.show &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }    
+
+    #lives-count {
+        color: $secondary-color;
+    }
+}
+
+.action {
+    &-heading--revive {
+        display: none;
+    }
+    &-heading--gameover {
+        display: none;
+    }
+    &-btn--revive {
+        display: none;
+    }
+    &-btn--skip {
+        margin-top: 4rem;
+        padding: 1rem 2rem; 
+        display: none;
+    }
+    &-btn--start {
+        display: inline-block;
+    }
+
+    &--revive {
+        .action-heading--revive {
+            display: block;
+        }
+
+        .action-heading--gameover {
+            display: none;
+        }
+
+        .action-btn--revive {
+            display: inline-block;
+        }
+
+        .action-btn--skip {
+            display: inline-block;
+        }
+
+        .action-btn--start {
+            display: none;
+        }
+    }
+
+    &--gameover {
+        .action-heading--revive {
+            display: none;
+        }
+
+        .action-heading--gameover {
+            display: block;
+        }
+
+        .action-btn--revive {
+            display: none;
+        }
+
+        .action-btn--skip {
+            display: none;
+        }
+
+        .action-btn--start {
+            display: inline-block;
+        }
+    }
+}

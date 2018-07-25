@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Snake Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />    
+</head>
+<body>
+    <div id="root" class="container">
+        <div class="header row">
+            <div class="col-1-of-3 header__score">
+                <div class="header__score-part">
+                    <img src="img/food.png" alt="" class="header__score-icon">
+                    <span id="score">0</span>
+                </div>
+                <div class="header__score-part">
+                    <img src="img/trophy.png" alt="" class="header__score-icon">
+                    <span id="high-score">0</span>
+                </div>
+            </div>
+            <div class="col-1-of-3 header__title">HUNGRY SNAKE</div>
+            <div class="col-1-of-3 header__lives" id="lives-container"></div>
+        </div>
+        
+        <div class="popup" id="popup">
+            <div class="popup__content action" id = "popup-box">                
+                    
+                    <h1 class="action-heading--revive heading-primary">
+                        <span class="heading-primary--main">Extra Life?</span>
+                        <span class="heading-primary--sub">You got <span id="lives-count">2</span> lives left</span>
+                    </h1>
+                    
+                    <h1 class="action-heading--gameover heading-primary">
+                        <span class="heading-primary--main">Game Over</span>
+                    </h1>
+                    
+                    
+                    <div><a class="action-btn--revive btn btn--green" id="retry-btn">Revive Me</a></div>
+                    <div><a class="action-btn--skip btn-text" id="skip-revive-btn">No Thanks &rarr;</a></div>
+                    <div><a class="action-btn--start btn btn--secondary" id="start-btn">Play</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.min.js"></script>
+<script src="food.js"></script>
+<script src="snake.js"></script>
+<script src="game.js"></script>
+<script src="app.js"></script>
+</html>
