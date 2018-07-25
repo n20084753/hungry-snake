@@ -3,7 +3,7 @@
     width: 900px;
     @include absoluteCenter;
     transform: translate(-50%, -44%); // hack to center the canvas with dom header
-    background: rgba($color: #000000, $alpha: .75);
+    background: rgba($color: #000000, $alpha: .85);
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
